@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,400;0,700;1,300&display=swap');
-
+/* generales */
 .header{
     height: 55px;
     position: relative;
@@ -14,12 +14,18 @@ background: -webkit-linear-gradient(87deg, rgba(255,255,255,1) 0%, rgba(227,133,
 background: linear-gradient(87deg, rgba(255,255,255,1) 0%, rgba(227,133,39,1) 69%, rgba(147,71,0,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#934700",GradientType=1);
 }
+/* Navbar */
 .navbar-brand{
     font-size: 21px;  
     font-family: 'Roboto Mono', monospace;  
     font-weight: bolder;
 }
 .navbar{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     border-radius: 0px 0px 12px 12px;
     -moz-border-radius: 0px 0px 12px 12px;
     -webkit-border-radius: 0px 0px 12px 12px;
@@ -55,35 +61,43 @@ box-shadow: 3px 2px 26px -3px rgba(199,103,0,1);
     justify-content: right;
     align-items: center;
 }
-.prueba{
-    font-family: 'Roboto Mono', monospace;  
-    font-weight: bolder;
-    display: flex;
-    flex-direction: column;
-    margin-left: 250px;
-    background-image: url("https://cdn.pixabay.com/photo/2014/06/25/12/01/motor-377055_960_720.jpg");
+/* Seccion 1 index */
+.inicio1{
+    width: 100%;
+    height: 80vh;
+    background-image:url("https://cdn.pixabay.com/photo/2014/06/25/12/01/motor-377055_960_720.jpg");
+    background-size: cover;
+    background-position: center;
     background-color: rgba(27, 26, 26, 0.5);
-    padding: 300px;
-    height: 200px;
-    width: 900px;
-    opacity: 0.9;   
-    
+    opacity: 0.9;
 
     border-radius: 51px 51px 51px 51px;
--moz-border-radius: 51px 51px 51px 51px;
--webkit-border-radius: 51px 51px 51px 51px;
-border: 0px solid #000000;
+    -moz-border-radius: 51px 51px 51px 51px;
+    -webkit-border-radius: 51px 51px 51px 51px;
+    border: 0px solid #000000;
 }
+
 .titulos{
+    width: 100%;
+    height: 80vh;
+
+    position: relative;
+    text-align: center;
+
     font-family: 'Roboto Mono', monospace;  
     font-weight: bolder;
     color: rgb(255, 255, 255);
-    font-size: 25px;
+    font-size: 35px;
 
-    text-align: center;
+
     -webkit-box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.75);
 box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.75);
+
+border-radius: 51px 51px 51px 51px;
+    -moz-border-radius: 51px 51px 51px 51px;
+    -webkit-border-radius: 51px 51px 51px 51px;
+    border: 0px solid #000000;
 
    
 background-color: #00000048;
@@ -96,17 +110,78 @@ background-color: #00000048;
     -moz-box-shadow: -1px 10px 18px 0px rgba(0,0,0,0.75);
     box-shadow: -1px 10px 18px 0px rgba(0,0,0,0.75);
 }
+
+.titulos p{
+    margin: 2opx auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
 .container{
     padding: 50px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: first baseline;
 
     align-items: center;
     justify-items: center;
     text-align: justify;
     
+    
     border-radius: 56px 56px 56px 56px;
     -moz-border-radius: 56px 56px 56px 56px;
     -webkit-border-radius: 56px 56px 56px 56px;
     border: 0px solid #000000;
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid slategray;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: gray;
+    height: 100%;
+    width:0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+
+.bannerofertas{
+    width: 100%;
+    font-family: 'Roboto Mono', monospace;  
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+    background-image: url("https://cdn.pixabay.com/photo/2014/06/25/12/01/motor-377055_960_720.jpg");
+    background-color: rgba(27, 26, 26, 0.5);
+    opacity: 0.9;
+    
+
+    border-radius: 51px 51px 51px 51px;
+-moz-border-radius: 51px 51px 51px 51px;
+-webkit-border-radius: 51px 51px 51px 51px;
+border: 0px solid #000000;
 }
