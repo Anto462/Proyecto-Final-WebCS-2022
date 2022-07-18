@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,400;0,700;1,300&display=swap');
+/* generales */
+.header{
+    height: 55px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+body{
+    background: rgb(255,255,255);
+background: -moz-linear-gradient(87deg, rgba(255,255,255,1) 0%, rgba(227,133,39,1) 69%, rgba(147,71,0,1) 100%);
+background: -webkit-linear-gradient(87deg, rgba(255,255,255,1) 0%, rgba(227,133,39,1) 69%, rgba(147,71,0,1) 100%);
+background: linear-gradient(87deg, rgba(255,255,255,1) 0%, rgba(227,133,39,1) 69%, rgba(147,71,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#934700",GradientType=1);
+}
+.centrar{
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+/* Navbar */
+.navbar-brand{
+    font-size: 21px;  
+    font-family: 'Roboto Mono', monospace;  
+    font-weight: bolder;
+}
+.navbar{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 0px 0px 12px 12px;
+    -moz-border-radius: 0px 0px 12px 12px;
+    -webkit-border-radius: 0px 0px 12px 12px;
+    border: 0px solid #000000;
+
+    -webkit-box-shadow: -5px 6px 36px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -5px 6px 36px 0px rgba(0,0,0,0.75);
+box-shadow: -5px 6px 36px 0px rgba(0,0,0,0.75);
+}
+.nav-link{
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+}
+.nav-link:hover{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgb(214, 134, 14);
+    transition: 0.5s;
+
+    border-radius: 50px 50px 50px 50px;
+-moz-border-radius: 50px 50px 50px 50px;
+-webkit-border-radius: 50px 50px 50px 50px;
+border: 0px solid #000000;
+
+-webkit-box-shadow: 3px 2px 26px -3px rgba(199,103,0,1);
+-moz-box-shadow: 3px 2px 26px -3px rgba(199,103,0,1);
+box-shadow: 3px 2px 26px -3px rgba(199,103,0,1);
+
+}
+.nav-derecha{
+
+    justify-content: right;
+    align-items: center;
+}
+/* Seccion 1 index */
+.inicio1{
+    width: 100%;
+    height: 80vh;
+    background-image:url("https://cdn.pixabay.com/photo/2014/06/25/12/01/motor-377055_960_720.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(27, 26, 26, 0.5);
+    opacity: 0.9;
+
+    border-radius: 51px 51px 51px 51px;
+    -moz-border-radius: 51px 51px 51px 51px;
+    -webkit-border-radius: 51px 51px 51px 51px;
+    border: 0px solid #000000;
+}
+
+.titulos{
+    width: 100%;
+    height: 80vh;
+
+    position: relative;
+    text-align: center;
+
+    font-family: 'Roboto Mono', monospace;  
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+
+
+    -webkit-box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.75);
+box-shadow: -1px 10px 40px 0px rgba(0,0,0,0.75);
+
+border-radius: 51px 51px 51px 51px;
+    -moz-border-radius: 51px 51px 51px 51px;
+    -webkit-border-radius: 51px 51px 51px 51px;
+    border: 0px solid #000000;
+
+   
+background-color: #00000048;
+}
+.titulos:hover{
+    transition: 1s;
+    background-color: #00000071;
+
+    -webkit-box-shadow: -1px 10px 18px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 10px 18px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 10px 18px 0px rgba(0,0,0,0.75);
+}
+
+.titulos p{
+    margin: 2opx auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.container{
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: first baseline;
+
+    align-items: center;
+    justify-items: center;
+    text-align: justify;
+    
+    
+    border-radius: 56px 56px 56px 56px;
+    -moz-border-radius: 56px 56px 56px 56px;
+    -webkit-border-radius: 56px 56px 56px 56px;
+    border: 0px solid #000000;
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid slategray;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: gray;
+    height: 100%;
+    width:0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+/* Seccion 2 index */
+.contactos{
+    background-color: #f1642c33;
+    font-family: 'Roboto Mono', monospace;  
+    font-weight: bolder;
+
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 0px solid #000000;
+
+    color: aliceblue;
+    font-size: 20px;
+}
+.inputs{
+    background-color: aliceblue;
+    border-radius: 67px 67px 67px 67px;
+    -moz-border-radius: 67px 67px 67px 67px;
+    -webkit-border-radius: 67px 67px 67px 67px;
+    border: 0px solid #000000;
+
+    padding: 10px;
+    padding-right: 60px;
+    margin-top: 25px;
+}
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.bannerofertas{
+    width: 100%;
+    font-family: 'Roboto Mono', monospace;  
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+    background-image: url("https://cdn.pixabay.com/photo/2014/06/25/12/01/motor-377055_960_720.jpg");
+    background-color: rgba(27, 26, 26, 0.5);
+    opacity: 0.9;
+    
+
+    border-radius: 51px 51px 51px 51px;
+-moz-border-radius: 51px 51px 51px 51px;
+-webkit-border-radius: 51px 51px 51px 51px;
+border: 0px solid #000000;
+}
+.container mt-5{
+align-items: center;
+}
+
