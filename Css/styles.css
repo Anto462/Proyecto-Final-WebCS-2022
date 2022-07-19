@@ -221,4 +221,7 @@ button:hover{
 -webkit-border-radius: 51px 51px 51px 51px;
 border: 0px solid #000000;
 }
+.container mt-5{
+align-items: center;
+}
 
