@@ -18,6 +18,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
     justify-content: center;
     align-items: center;
     text-align: center; 
+    font-family: 'Roboto Mono', monospace;  
 }
 /* Navbar */
 .navbar-brand{
