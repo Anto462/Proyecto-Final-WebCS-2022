@@ -223,6 +223,46 @@ border: 0px solid #000000;
 align-items: center;
 }
 
+footer{
+    background-color:   rgb(214, 134, 14);
+    height: auto;
+    width: 100vw;
+    font-family: 'Roboto Mono', monospace;
+    padding: 40px;
+     
+}
+.footer-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-cont p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 15px;
+}
+
+.socialmedia{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+
+    font-size: 25px;
+}
+
+.socialmedia li{
+    margin: 0 15px;
+}
+.socialmedia a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .sobrenoshead{
     display: flex;
     flex-direction:column;
