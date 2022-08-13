@@ -43,7 +43,7 @@ $row=mysqli_fetch_array($query);
                                     <input type="password" class="form-control mb-3" name="CEDULA_EMP" placeholder="CEDULA_EMP">
                                     
 
-                                    <input type="submit" href="index.html" class="btn btn-dark">
+                                    <input type="submit" value="Registrar" href="index.html" class="btn btn-dark">
                                 </form>
                         </div>
 
