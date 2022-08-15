@@ -2,7 +2,7 @@
 function conectar(){
     $host="localhost";
     $user="root";
-    $pass="";
+    $pass="Anto0402";
 
     $bd="repuestos";
     $con=mysqli_connect($host,$user,$pass);

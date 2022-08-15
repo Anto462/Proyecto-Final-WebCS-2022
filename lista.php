@@ -71,9 +71,11 @@ $row=mysqli_fetch_array($query);
     <div class="container mt-5 centrar" >
                    
 
-                        <div class="col-md-8">
-                            <table class="table" >
-                                <thead class="table-success table-striped" >
+                        <div class="col-md-8 ">
+                        <div class="table-responsive-lg">
+                            <table class="table caption-top  table-striped" >
+                            <caption>Listado de usuarios agregados</caption>
+                                <thead class="table-dark table-striped" >
                                     <tr>
                                     <th>Cedula</th>
                                     <th>Nombre</th>
@@ -111,10 +113,11 @@ $row=mysqli_fetch_array($query);
                                         ?>
                                 </tbody>
                             </table>
+                            </div>
                         
                     </div>  
             </div>
-            <div class="centrar">
+            <div  class="centrar">
             <button> <a href="index.html" style="text-decoration: none; color: white;"><span></span> Volver a la pagina principal</a></button>
             </div>
 </body>

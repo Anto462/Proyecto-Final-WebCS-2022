@@ -6,7 +6,7 @@ session_start();
 $_SESSION['NOMBRE']=$usuario;
 
 
-$conexion=mysqli_connect("localhost","root","","repuestos");
+$conexion=mysqli_connect("localhost","root","Anto0402","repuestos");
 
 $consulta="SELECT*FROM cliente where NOMBRE='$usuario' and CEDULA_EMP='$pass'";
 $resultado=mysqli_query($conexion,$consulta);
