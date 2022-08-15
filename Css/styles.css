@@ -64,6 +64,11 @@ box-shadow: 3px 2px 26px -3px rgba(199,103,0,1);
     justify-content: right;
     align-items: center;
 }
+.nav-izquierda{
+
+    justify-content: left;
+    align-items: center;
+}
 /* Seccion 1 index */
 .inicio1{
     width: 100%;
