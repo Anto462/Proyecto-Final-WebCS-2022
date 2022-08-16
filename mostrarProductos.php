@@ -102,10 +102,7 @@ $row = mysqli_fetch_array($query);
                             <a href="actualizaProductos.php?ID_PRODUCTO=<?php echo $row['ID_PRODUCTO'] ?>" class="btn btn-outline-success">Modifcar producto</a>
                         </td>
                         <td>
-                            <form action="eliminaProductos.php" method="POST">
-                                <input name="ID_PRODUCTO" type="text" id="ID_PRODUCTO" style="width:504px;" value="<?php echo $row['ID_PRODUCTO'] ?>" hidden required />
-                                <button type="submit" class="btn btn-outline-danger" onclick="return validaEliminacion();">Eliminar producto</button>
-                            </form>
+                        <a href="eliminaProductos.php?id=<?php echo $row['ID_PRODUCTO'] ?>" class="btn btn-danger">deletar producto</a>
                         </td>
                     </table>
                 </div>
