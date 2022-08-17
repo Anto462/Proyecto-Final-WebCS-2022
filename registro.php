@@ -40,7 +40,8 @@ $row=mysqli_fetch_array($query);
                                     <input type="text" class="form-control mb-3" name="TELEFONO" placeholder="TELEFONO">
                                     <input type="email" class="form-control mb-3" name="EMAIL" placeholder="EMAIL">
                                     <input type="text" class="form-control mb-3" name="DIRECCION" placeholder="DIRECCION">
-                                    <input type="password" class="form-control mb-3" name="CEDULA_EMP" placeholder="CEDULA_EMP">
+                                    <input type="text" class="form-control mb-3" name="CEDULA_EMP" placeholder="CEDULA_EMP">
+                                    <input type="password" class="form-control mb-3" name="ROL" placeholder="ROL">
                                     
 
                                     <input type="submit" value="Registrar" href="index.html" class="btn btn-dark">

@@ -41,13 +41,7 @@ $row=mysqli_fetch_array($query);
                     <a class="nav-link active" href="muestra.php"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/56482/gear-emoji-clipart-md.png" width="25" height="25" class="d-inline-block align-top" alt=""/>  Nuestros productos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="login.html"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/56482/gear-emoji-clipart-md.png" width="25" height="25" class="d-inline-block align-top" alt=""/> Login</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="registro.php"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/56482/gear-emoji-clipart-md.png" width="25" height="25" class="d-inline-block align-top" alt=""/> Registrarse</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="lista.php"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/56482/gear-emoji-clipart-md.png" width="25" height="25" class="d-inline-block align-top" alt=""/> Lista de Registrados</a>
+                    <a class="nav-link active" href="registro.php"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/56482/gear-emoji-clipart-md.png" width="25" height="25" class="d-inline-block align-top" alt=""/> Registrar</a>
                   </li>
                 </ul>
               </div>
@@ -84,7 +78,8 @@ $row=mysqli_fetch_array($query);
                                         <th>telefono</th>
                                         <th>email</th>
                                         <th>direccion</th>
-                                        <th>password</th>
+                                        <th>Cedula Empleado</th>
+                                        <th>Contraseña</th>
                                         
                                     </tr>
                                 </thead>
@@ -102,6 +97,7 @@ $row=mysqli_fetch_array($query);
                                                 <th><?php  echo $row['EMAIL']?></th>   
                                                 <th><?php  echo $row['DIRECCION']?></th>   
                                                 <th><?php  echo $row['CEDULA_EMP']?></th>   
+                                                <th><?php  echo $row['ROL']?></th>   
                                                  
 
                                                 <th><a href="actualizar.php?id=<?php echo $row['CEDULA_CLI'] ?>" class="btn btn-info">Editar</a></th>

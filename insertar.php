@@ -10,14 +10,15 @@ $TELEFONO=$_POST['TELEFONO'];
 $EMAIL=$_POST['EMAIL'];
 $DIRECCION=$_POST['DIRECCION'];
 $CEDULA_EMP=$_POST['CEDULA_EMP'];
+$ROL=$_POST['ROL'];
 
 
 
-$sql="INSERT INTO cliente VALUES('$CEDULA_CLI','$NOMBRE','$APELLIDO1','$APELLIDO2','$TELEFONO','$EMAIL','$DIRECCION','$CEDULA_EMP')";
+$sql="INSERT INTO cliente VALUES('$CEDULA_CLI','$NOMBRE','$APELLIDO1','$APELLIDO2','$TELEFONO','$EMAIL','$DIRECCION','$CEDULA_EMP','$ROL')";
 $query= mysqli_query($con,$sql);
 
 if($query){
-    Header("Location: lista.php");
+    Header("Location: index.html");
     
 }else {
 }

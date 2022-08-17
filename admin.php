@@ -24,20 +24,18 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                 
+                  
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html" ><img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/56482/gear-emoji-clipart-md.png" width="25" height="25" class="d-inline-block align-top" alt=""/>  Inicio</a>
+                    <a class="nav-link active" href="muestra.php"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/56482/gear-emoji-clipart-md.png" width="25" height="25" class="d-inline-block align-top" alt=""/>  Lista de productos</a>
+                  </li>
+                 
+                  
+                  <li class="nav-item">
+                    <a class="nav-link active" href="lista.php"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/56482/gear-emoji-clipart-md.png" width="25" height="25" class="d-inline-block align-top" alt=""/> Lista de Registrados</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="sobrenosotros.html"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/56482/gear-emoji-clipart-md.png" width="25" height="25" class="d-inline-block align-top" alt=""/>  Mas sobre nosotros</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="muestracl.php"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/56482/gear-emoji-clipart-md.png" width="25" height="25" class="d-inline-block align-top" alt=""/>  Nuestros productos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="login.php"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/56482/gear-emoji-clipart-md.png" width="25" height="25" class="d-inline-block align-top" alt=""/> Login</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="registro.php"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/56482/gear-emoji-clipart-md.png" width="25" height="25" class="d-inline-block align-top" alt=""/> Registrarse</a>
+                    <a class="nav-link active" aria-current="page" href="index.html" ><img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/56482/gear-emoji-clipart-md.png" width="25" height="25" class="d-inline-block align-top" alt=""/>  Salir</a>
                   </li>
                 </ul>
               </div>
@@ -61,13 +59,11 @@
           <br>
           <br>
           <br>
-        <h1>GRAN PROMOCION!</h1>
-        <h2>Consiguele las mejores piezas a tu auto!!!</h2>
+        <h1>Bienvenido</h1>
+        <h1>PAGINA DE ADMINISTRADOR</h1>
+        <h2>Recuerda guardar tus cambios!!!</h2>
         <div>
           <p>Promocion valida hasta el 1 de Enero del 2023</p>
-      </div>
-      <div>
-        <button type="button"><span></span> IR </button>
       </div>
       <br>
        </div>
@@ -84,43 +80,10 @@
     </div>
 </div>
 <div>
-        <div class="contactos centrar">
-          <br>
-          <h2 class="centrar">Cotiza ya mismo tu repuesto</h2>
+       
+            
 
-            <h2 style="color: rgb(235, 98, 19); font-size: 17px;">Contactanos llenando todos los campos</h2>
-            <br>
 
-            <div id="error"></div>
-
-            <div class="form">
-            <form id="form" action="/" method="GET">
-            <div>   
-            <label>Nombre:</label>
-            <br>
-            <input id="name" class="inputs" type="text" placeholder="Tu nombre" name="user" maxlength="30">
-            <br>
-            <br>
-            <label>Telefono:</label>
-            <br>
-            <input id="phone" class="inputs" type= "number" placeholder="Tu telefono" name="tel" maxlength="8">
-            </div> 
-            <br>
-            <label>Correo:</label>
-            <br>
-            <input id="mail" style="padding-right: 350px;" class="inputs" type="email" placeholder="Tu email" name="email" maxlength="50">
-            <br>
-            <br>
-            <label>Detalle del producto:</label>
-            <br>
-            <input id="sms" type="text" placeholder="Producto a cotizar" name="mensaje" maxlength="10000" height="50px" width="50px">
-
-            <br>
-            <br>
-            <button onclick="guardar()" type="submit"><span></span> Enviar </button>
-            </div>
-
-        </form>
 
 </div>
 <footer class="pie-pagina">

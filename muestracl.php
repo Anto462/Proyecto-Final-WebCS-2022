@@ -109,8 +109,6 @@ $row = mysqli_fetch_array($query);
                         echo "<td>" . $row['PRECIO'] .      "</td> ";
                         echo "<td>" . $row['DESCRIPCION'] .      "</td> ";
                         echo "<td>" . $row['ID_PROVEEDOR'] .      "</td> ";
-                        echo "<td>" . "<a href='mostrarProductos.php?ID_PRODUCTO=" .  $row['ID_PRODUCTO'] .
-                            "'>Mostrar</a>" .   "</td>";
                         echo "</tr>";
                     }
                 } else {

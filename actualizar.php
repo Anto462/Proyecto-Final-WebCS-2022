@@ -35,7 +35,8 @@ $row=mysqli_fetch_array($query);
                                     <input type="text" class="form-control mb-3" name="TELEFONO" placeholder="TELEFONO" value="<?php echo $row['TELEFONO']  ?>">
                                     <input type="email" class="form-control mb-3" name="EMAIL" placeholder="EMAIL" value="<?php echo $row['EMAIL']  ?>">
                                     <input type="text" class="form-control mb-3" name="DIRECCION" placeholder="DIRECCION" value="<?php echo $row['DIRECCION']  ?>">
-                                    <input type="password" class="form-control mb-3" name="CEDULA_EMP" placeholder="CEDULA_EMP" value="<?php echo $row['CEDULA_EMP']  ?>">
+                                    <input type="text" class="form-control mb-3" name="CEDULA_EMP" placeholder="CEDULA_EMP" value="<?php echo $row['CEDULA_EMP']  ?>">
+                                    <input type="password" class="form-control mb-3" name="ROL" placeholder="ROL" value="<?php echo $row['ROL']  ?>">
                                     
                             <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
                     </form>
