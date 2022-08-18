@@ -63,7 +63,7 @@
           <p>Promocion valida hasta el 1 de Enero del 2023</p>
       </div>
       <div>
-        <button type="button"><span></span> IR </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="muestra.php">IR </a> </button>
       </div>
       <br>
        </div>
@@ -72,11 +72,11 @@
     <br>
     <div>
       <br>
-      <button type="button"><span></span> FRENOS </button>
-      <button type="button"><span></span> LLANTAS </button>
-      <button type="button"><span></span> LUCES </button>
-      <button type="button"><span></span> SEGURIDAD </button>
-      <button type="button"><span></span> EN OFERTA </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Frenos.php">FRENOS</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Motores.php">MOTORES</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Llantas.php">LLANTAS</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Seguridad.php">SEGURIDAD</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Oferta.php">EN OFERTAA</a> </button>
     </div>
 </div>
 <div>

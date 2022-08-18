@@ -56,8 +56,8 @@ $row = mysqli_fetch_array($query);
     </header>
 
     <div class="sobrenoshead centrar">
-        <h1>Productos</h1>
-      <div style="font-size: 15px; text-decoration: none ;">
+        <h1><a style="text-decoration:none ; color:whitesmoke ;" href="muestra.php">Productos</a></h1>
+        <div style="font-size: 15px; text-decoration: none ;">
       <br>
       <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Frenos.php">FRENOS</a> </button>
       <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Motores.php">MOTORES</a> </button>
@@ -66,6 +66,7 @@ $row = mysqli_fetch_array($query);
       <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Oferta.php">EN OFERTAA</a> </button>
     </div>
     </div>
+ 
         <div style="background-color:  #f1642c33;" class="main">
         <?php
             //Pagina que muestra los datos de base de datos
@@ -76,10 +77,10 @@ $row = mysqli_fetch_array($query);
             function ImprimeDatos()
             {
                 $elSQL = "SELECT pr.ID_PRODUCTO, NOMBRE_PRODUCTO, PRECIO, DESCRIPCION, ID_PROVEEDOR
-                                FROM producto pr";
+                                FROM producto pr WHERE ID_PROVEEDOR=3";
                 $miQuery = ConsultaSQL($elSQL);
                 echo "<div id=ContactDiv>";
-                echo "<h3>Listado de productos:</h3>";
+                echo "<h3>Estrena nuevas llantas:</h3>";
                 echo "<br>";
                 imprimeTabla($miQuery);
                 echo "</div>";
@@ -87,7 +88,6 @@ $row = mysqli_fetch_array($query);
             //Imprimir tabla
             function imprimeTabla($miQuery)
             {
-                
                 echo "<div style='background-color:  #f1642c33; margin:5px ;' class='card-group row row-cols-2'>";
                 if ($miQuery->num_rows > 0) {
                     echo "<tr>";
