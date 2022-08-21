@@ -134,7 +134,7 @@ $row = mysqli_fetch_array($query);
 
                     <table>
                         <td>
-                            <a href="productos.php" class="btn btn-outline-primary">Volver a los productos</a>
+                            <a href="muestra.php" class="btn btn-outline-primary">Volver a los productos</a>
                         </td>
                         <td>
                             <a href="actualizaProductos.php?ID_PRODUCTO=<?php echo $ID_PRODUCTO ?>" class="btn btn-outline-success">Modifcar producto</a>
