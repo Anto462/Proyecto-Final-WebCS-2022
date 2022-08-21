@@ -2,7 +2,7 @@
     include("conexion.php");
     $con=conectar();
 
-$id=$_GET['id'];
+$id=$_GET['ID_PRODUCTO'];
 
 $sql="SELECT * FROM producto WHERE ID_PRODUCTO='$id'";
 $query=mysqli_query($con,$sql);

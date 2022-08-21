@@ -12,10 +12,10 @@ $ID_PROVEEDOR=$_POST['ID_PROVEEDOR'];
 
 
 $sql="UPDATE producto SET  ID_PRODUCTO='$ID_PRODUCTO' ,NOMBRE_PRODUCTO='$NOMBRE_PRODUCTO',
-PRECIO='$PRECIO',DESCRIPCION='$DESCRIPCION' ,ID_PROVEEDOR='$ID_PROVEEDOR'";
+PRECIO='$PRECIO',DESCRIPCION='$DESCRIPCION' ,ID_PROVEEDOR='$ID_PROVEEDOR' WHERE ID_PRODUCTO='$ID_PRODUCTO' ";
 $query=mysqli_query($con,$sql);
 
     if($query){
-        Header("Location: productos.php");
+        Header("Location: muestra.php");
     }
 ?>

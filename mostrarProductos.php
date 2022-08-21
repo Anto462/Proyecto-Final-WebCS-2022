@@ -80,18 +80,56 @@ $row = mysqli_fetch_array($query);
       </div>
     </div>
 
+    <?php     
+        function recogeGet($var, $m = "")
+        {
+            if (!isset($_GET[$var])) {
+                $tmp = (is_array($m)) ? [] : "";
+            } elseif (!is_array($_GET[$var])) {
+                $tmp = trim(htmlspecialchars($_GET[$var], ENT_QUOTES, "UTF-8"));
+            } else {
+                $tmp = $_GET[$var];
+                array_walk_recursive($tmp, function (&$valor) {
+                    $valor = trim(htmlspecialchars($valor, ENT_QUOTES, "UTF-8"));
+                });
+            }
+            return $tmp;
+        }
+        $ID_PRODUCTO = recogeGet('ID_PRODUCTO');
+        $validaDatosBD = true;
+
+        require_once 'consultaBD.php';
+
+        $elSQL = "SELECT NOMBRE_PRODUCTO, PRECIO, DESCRIPCION, ID_PROVEEDOR
+                    FROM producto
+                        where ID_PRODUCTO='$ID_PRODUCTO'";
+        $miQuery = ConsultaSQL($elSQL);
+
+        if ($miQuery->num_rows > 0) {
+            while ($row = $miQuery->fetch_assoc()) {
+                $NOMBRE_PRODUCTO = $row["NOMBRE_PRODUCTO"];
+                $PRECIO = $row["PRECIO"];
+                $DESCRIPCION = $row["DESCRIPCION"];
+                $ID_PROVEEDOR = $row["ID_PROVEEDOR"];
+            }
+        } else {
+            $validaDatosBD = false;
+        }
+
+        ?>
+
    <div class="main">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Lista de productos</h5>
                     <p class="card-text">
-                        CÓdigo de producto: <?php echo $row['ID_PRODUCTO']?> <br>
-                        Nombre del producto: <?php echo $row['NOMBRE_PRODUCTO']?>
+                        Codigo de producto: <?php echo "<strong>$ID_PRODUCTO</strong>" ?> <br>
+                        Nombre del producto: <?php echo "<strong>$NOMBRE_PRODUCTO</strong>" ?>
                         <br>
-                        Precio: <?php echo $row['PRECIO'] ?>
+                        Precio: <?php echo "<strong>$PRECIO</strong>" ?>
                         <br>
-                        Descripción: <?php echo $row['DESCRIPCION'] ?> <br>
-                        Código del proveedor: <?php echo $row['ID_PROVEEDOR'] ?> <br>
+                        Descripción: <?php echo "<strong>$DESCRIPCION</strong>" ?> <br>
+                        Código del proveedor: <?php echo "<strong>$ID_PROVEEDOR</strong>" ?> <br>
                     </p>
 
                     <table>
@@ -99,10 +137,10 @@ $row = mysqli_fetch_array($query);
                             <a href="productos.php" class="btn btn-outline-primary">Volver a los productos</a>
                         </td>
                         <td>
-                            <a href="actualizaProductos.php?ID_PRODUCTO=<?php echo $row['ID_PRODUCTO'] ?>" class="btn btn-outline-success">Modifcar producto</a>
+                            <a href="actualizaProductos.php?ID_PRODUCTO=<?php echo $ID_PRODUCTO ?>" class="btn btn-outline-success">Modifcar producto</a>
                         </td>
                         <td>
-                        <a href="eliminaProductos.php?id=<?php echo $row['ID_PRODUCTO'] ?>" class="btn btn-danger">deletar producto</a>
+                        <a href="eliminaProductos.php?id=<?php echo $ID_PRODUCTO ?>" class="btn btn-danger">deletar producto</a>
                         </td>
                     </table>
                 </div>
