@@ -22,6 +22,7 @@ $row=mysqli_fetch_array($query);
         
     </head>
     <body>
+        
                 <div class="container mt-5">
                     <form action="updateProductos.php" method="POST">
                    
