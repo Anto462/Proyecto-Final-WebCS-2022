@@ -29,14 +29,14 @@ $row=mysqli_fetch_array($query);
                                 <input type="hidden" name="CEDULA_CLI" value="<?php echo $row['CEDULA_CLI']  ?>">
                                 
 
-                                <input type="text" class="form-control mb-3" name="NOMBRE" placeholder="NOMBRE" value="<?php echo $row['NOMBRE']  ?>">
-                                    <input type="text" class="form-control mb-3" name="APELLIDO1" placeholder="APELLIDO1"  value="<?php echo $row['APELLIDO1']  ?>">
-                                    <input type="text" class="form-control mb-3" name="APELLIDO2" placeholder="APELLIDO2" value="<?php echo $row['APELLIDO2']  ?>">
-                                    <input type="text" class="form-control mb-3" name="TELEFONO" placeholder="TELEFONO" value="<?php echo $row['TELEFONO']  ?>">
-                                    <input type="email" class="form-control mb-3" name="EMAIL" placeholder="EMAIL" value="<?php echo $row['EMAIL']  ?>">
-                                    <input type="text" class="form-control mb-3" name="DIRECCION" placeholder="DIRECCION" value="<?php echo $row['DIRECCION']  ?>">
-                                    <input type="text" class="form-control mb-3" name="CEDULA_EMP" placeholder="CEDULA_EMP" value="<?php echo $row['CEDULA_EMP']  ?>">
-                                    <input type="password" class="form-control mb-3" name="ROL" placeholder="ROL" value="<?php echo $row['ROL']  ?>">
+                                <input type="text" class="form-control mb-3" name="NOMBRE" placeholder="NOMBRE" style="width:504px;" value="<?php echo $row['NOMBRE']  ?>">
+                                    <input type="text" class="form-control mb-3" name="APELLIDO1" placeholder="APELLIDO1"  style="width:504px;" value="<?php echo $row['APELLIDO1']  ?>">
+                                    <input type="text" class="form-control mb-3" name="APELLIDO2" placeholder="APELLIDO2" style="width:504px;" value="<?php echo $row['APELLIDO2']  ?>">
+                                    <input type="text" class="form-control mb-3" name="TELEFONO" placeholder="TELEFONO" style="width:504px;" value="<?php echo $row['TELEFONO']  ?>">
+                                    <input type="email" class="form-control mb-3" name="EMAIL" placeholder="EMAIL" style="width:504px;" value="<?php echo $row['EMAIL']  ?>">
+                                    <input type="text" class="form-control mb-3" name="DIRECCION" placeholder="DIRECCION" style="width:504px;" value="<?php echo $row['DIRECCION']  ?>">
+                                    <input type="text" class="form-control mb-3" name="CEDULA_EMP" placeholder="CEDULA_EMP" style="width:504px;" value="<?php echo $row['CEDULA_EMP']  ?>">
+                                    <input type="password" class="form-control mb-3" name="ROL" placeholder="ROL" style="width:504px;" value="<?php echo $row['ROL']  ?>">
                                     
                             <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
                     </form>
