@@ -123,7 +123,7 @@ $row = mysqli_fetch_array($query);
                 <div class="card-body">
                     <h5 class="card-title">Lista de productos</h5>
                     <p class="card-text">
-                        Codigo de producto: <?php echo "<strong>$ID_PRODUCTO</strong>" ?> <br>
+                        Código de producto: <?php echo "<strong>$ID_PRODUCTO</strong>" ?> <br>
                         Nombre del producto: <?php echo "<strong>$NOMBRE_PRODUCTO</strong>" ?>
                         <br>
                         Precio: <?php echo "<strong>$PRECIO</strong>" ?>
@@ -140,7 +140,7 @@ $row = mysqli_fetch_array($query);
                             <a href="actualizaProductos.php?ID_PRODUCTO=<?php echo $ID_PRODUCTO ?>" class="btn btn-outline-success">Modifcar producto</a>
                         </td>
                         <td>
-                        <a href="eliminaProductos.php?id=<?php echo $ID_PRODUCTO ?>" class="btn btn-danger">deletar producto</a>
+                        <a href="eliminaProductos.php?id=<?php echo $ID_PRODUCTO ?>" class="btn btn-danger">Eliminar producto</a>
                         </td>
                     </table>
                 </div>
