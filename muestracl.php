@@ -57,19 +57,16 @@ $row = mysqli_fetch_array($query);
 
     <div class="sobrenoshead centrar">
         <h1>Productos</h1>
+      <div style="font-size: 15px; text-decoration: none ;">
+      <br>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Frenos.php">FRENOS</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Motores.php">MOTORES</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Llantas.php">LLANTAS</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Seguridad.php">SEGURIDAD</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Oferta.php">EN OFERTAA</a> </button>
     </div>
-
-    <div class="row">
-        <div class="side">
-            <div class="sidebar-wrapper">
-                <div class="sidebar">
-                    <ul class="sidebar__nav">
-                        <li> <a href="muestra.php">Mostrar Productos</a> </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="main">
+    </div>
+        <div style="background-color:  #f1642c33;" class="main">
         <?php
             //Pagina que muestra los datos de base de datos
 
@@ -82,7 +79,7 @@ $row = mysqli_fetch_array($query);
                                 FROM producto pr";
                 $miQuery = ConsultaSQL($elSQL);
                 echo "<div id=ContactDiv>";
-                echo "<h3>Datos de los productos ingresados al sistema</h3>";
+                echo "<h3>Listado de productos:</h3>";
                 echo "<br>";
                 imprimeTabla($miQuery);
                 echo "</div>";
@@ -90,26 +87,20 @@ $row = mysqli_fetch_array($query);
             //Imprimir tabla
             function imprimeTabla($miQuery)
             {
-                echo "<table WIDTH=75%>";
-                echo "<tr>";
-                echo " <th> Código del producto  </th>";
-                echo " <th> </th>";
-                echo " <th> </th>";
-                echo " <th> </th>";
-                echo " <th> Nombre del Producto </th>";
-                echo " <th> Precio  </th>";
-                echo " <th> Descripción </th>";
-                echo " <th> Código del proveedor </th>";
-                echo "</tr>";
+                
+                echo "<div style='background-color:  #f1642c33; margin:5px ;' class='card-group row row-cols-2'>";
                 if ($miQuery->num_rows > 0) {
                     echo "<tr>";
                     while ($row = $miQuery->fetch_assoc()) {
-                        echo "<td colspan='4'>" . $row['ID_PRODUCTO'] .      "</td> ";
-                        echo "<td>" . $row['NOMBRE_PRODUCTO'] .      "</td> ";
-                        echo "<td>" . $row['PRECIO'] .      "</td> ";
-                        echo "<td>" . $row['DESCRIPCION'] .      "</td> ";
-                        echo "<td>" . $row['ID_PROVEEDOR'] .      "</td> ";
-                        echo "</tr>";
+                echo "<div style='margin:10px ;' class='card text-center text-white bg-dark mb-3' style='width: 18rem;'>";
+                echo "<img src='images/jp-performance-4332255_1280.jpg' class='card-img-top' alt='...'>";
+                echo "<div class='card-body'>";
+                echo "<h5 class='card-title'>" . $row['NOMBRE_PRODUCTO'] ."</h5>";
+                echo "<h6 class='card-subtitle mb-2 text-muted'>Precio:</h6>";
+                echo "<h6 class='card-subtitle mb-2 text-muted'>" . $row['PRECIO'] .      "</h6>";
+                echo " <p class='card-text'>" . $row['DESCRIPCION'] .      "</p>";
+                echo "</div>";
+                echo "</div>";
                     }
                 } else {
                     echo "<tr>";
@@ -117,13 +108,14 @@ $row = mysqli_fetch_array($query);
                     echo "</tr>";
                     //    echo "0 Filas";
                 }
+                echo "</div>";
                 echo "</table>";
             }
             //End imprimeTabla  -----------------------------------------------------------
 
             ?>
         </div>
-    </div>
+    
 
     <div class="centrar">
         <button> <a href="index.html" style="text-decoration: none; color: white;"><span></span> Volver a la pagina principal</a></button>

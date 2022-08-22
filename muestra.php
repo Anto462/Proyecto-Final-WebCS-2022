@@ -63,7 +63,7 @@ $row = mysqli_fetch_array($query);
       <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Motores.php">MOTORES</a> </button>
       <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Llantas.php">LLANTAS</a> </button>
       <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Seguridad.php">SEGURIDAD</a> </button>
-      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Oferta.php">EN OFERTAA</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Oferta.php">EN OFERTA</a> </button>
     </div>
     </div>
         <div style="background-color:  #f1642c33;" class="main">
@@ -87,8 +87,7 @@ $row = mysqli_fetch_array($query);
             //Imprimir tabla
             function imprimeTabla($miQuery)
             {
-                
-                echo "<div style='background-color:  #f1642c33; margin:5px ;' class='card-group row row-cols-2'>";
+                echo "<div style='background-color:  #f1642c33; margin:5px ;' class='row row-cols-4 centrar'>";
                 if ($miQuery->num_rows > 0) {
                     echo "<tr>";
                     while ($row = $miQuery->fetch_assoc()) {

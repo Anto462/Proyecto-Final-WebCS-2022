@@ -93,7 +93,7 @@ $row = mysqli_fetch_array($query);
                     echo "<tr>";
                     while ($row = $miQuery->fetch_assoc()) {
                 echo "<div style='margin:10px ;' class='card text-center text-white bg-dark mb-3' style='width: 18rem;'>";
-                echo "<img src='images/jp-performance-4332255_1280.jpg' class='card-img-top' alt='...'>";
+                echo "<img src='images/motor.jpg' class='card-img-top' alt='...'>";
                 echo "<div class='card-body'>";
                 echo "<h5 class='card-title'>" . $row['NOMBRE_PRODUCTO'] ."</h5>";
                 echo "<h6 class='card-subtitle mb-2 text-muted'>Precio:</h6>";
