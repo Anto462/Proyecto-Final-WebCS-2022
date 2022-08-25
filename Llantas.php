@@ -24,6 +24,10 @@ $row = mysqli_fetch_array($query);
 </head>
 
 <body>
+<?php
+    error_reporting(0);
+    $admin = ($_GET['admin']);
+    ?>
     <header th:fragment="header" class="header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -56,14 +60,14 @@ $row = mysqli_fetch_array($query);
     </header>
 
     <div class="sobrenoshead centrar">
-        <h1><a style="text-decoration:none ; color:whitesmoke ;" href="muestra.php">Productos</a></h1>
+        <h1><a style="text-decoration:none ; color:whitesmoke ;" href="muestra.php?admin=<?php echo $admin ?>">Productos</a></h1>
         <div style="font-size: 15px; text-decoration: none ;">
       <br>
-      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Frenos.php">FRENOS</a> </button>
-      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Motores.php">MOTORES</a> </button>
-      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Llantas.php">LLANTAS</a> </button>
-      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Seguridad.php">SEGURIDAD</a> </button>
-      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Oferta.php">EN OFERTAA</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Frenos.php?admin=<?php echo $admin ?>">FRENOS</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Motores.php?admin=<?php echo $admin ?>">MOTORES</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Llantas.php?admin=<?php echo $admin ?>">LLANTAS</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Seguridad.php?admin=<?php echo $admin ?>">SEGURIDAD</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Oferta.php?admin=<?php echo $admin ?>">EN OFERTA</a> </button>
     </div>
     </div>
  
@@ -99,8 +103,12 @@ $row = mysqli_fetch_array($query);
                 echo "<h6 class='card-subtitle mb-2 text-muted'>Precio:</h6>";
                 echo "<h6 class='card-subtitle mb-2 text-muted'>" . $row['PRECIO'] .      "</h6>";
                 echo " <p class='card-text'>" . $row['DESCRIPCION'] .      "</p>";
-                echo "<a href='mostrarProductos.php?ID_PRODUCTO=" .  $row['ID_PRODUCTO'] .
-                "' class='btn btn-primary'> Modificar </a>";
+                error_reporting(0);
+                $admin = ($_GET['admin']);
+                if($admin==1){
+                    echo "<a href='mostrarProductos.php?ID_PRODUCTO=" .  $row['ID_PRODUCTO'] .
+                    "' class='btn btn-primary'> Modificar </a>";
+                }
                 echo "</div>";
                 echo "</div>";
                     }
@@ -108,12 +116,12 @@ $row = mysqli_fetch_array($query);
                     echo "<tr>";
                     echo " <th> No hay productos registrados </th>";
                     echo "</tr>";
-                    //    echo "0 Filas";
+                    
                 }
                 echo "</div>";
                 echo "</table>";
             }
-            //End imprimeTabla  -----------------------------------------------------------
+            
 
             ?>
         </div>

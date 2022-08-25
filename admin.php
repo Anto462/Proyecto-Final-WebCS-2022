@@ -14,7 +14,9 @@
     <script defer src="js/script.js"></script>
   </head>
 <body>
-  
+<?php
+     $admin = 1;
+     ?>
     <header th:fragment="header" class="header">  
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -27,7 +29,7 @@
                  
                   
                   <li class="nav-item">
-                    <a class="nav-link active" href="muestra.php"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/56482/gear-emoji-clipart-md.png" width="25" height="25" class="d-inline-block align-top" alt=""/>  Lista de productos</a>
+                    <a class="nav-link active" href="muestra.php?admin=<?php echo $admin ?>"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/56482/gear-emoji-clipart-md.png" width="25" height="25" class="d-inline-block align-top" alt=""/>  Lista de productos</a>
                   </li>
                  
                   
@@ -72,11 +74,11 @@
     <br>
     <div>
       <br>
-      <button type="button"><span></span> FRENOS </button>
-      <button type="button"><span></span> LLANTAS </button>
-      <button type="button"><span></span> LUCES </button>
-      <button type="button"><span></span> SEGURIDAD </button>
-      <button type="button"><span></span> EN OFERTA </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Frenos.php?admin=<?php echo $admin ?>">FRENOS</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Motores.php?admin=<?php echo $admin ?>">MOTORES</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Llantas.php?admin=<?php echo $admin ?>">LLANTAS</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Seguridad.php?admin=<?php echo $admin ?>">SEGURIDAD</a> </button>
+      <button type="button"><span></span> <a style="text-decoration:none ; color:whitesmoke ;" href="Oferta.php?admin=<?php echo $admin ?>">EN OFERTA</a> </button>
     </div>
 </div>
 <div>
