@@ -78,7 +78,7 @@ $row=mysqli_fetch_array($query);
                                         <th>telefono</th>
                                         <th>email</th>
                                         <th>direccion</th>
-                                        <th>Cedula Empleado</th>
+                                        <th>Cedula Confirm</th>
                                         <th>Contraseña</th>
                                         
                                     </tr>
@@ -114,7 +114,7 @@ $row=mysqli_fetch_array($query);
                     </div>  
             </div>
             <div  class="centrar">
-            <button> <a href="index.html" style="text-decoration: none; color: white;"><span></span> Volver a la pagina principal</a></button>
+            <button> <a href="admin.php" style="text-decoration: none; color: white;"><span></span> Volver a la pagina principal</a></button>
             </div>
 </body>
 </html>
